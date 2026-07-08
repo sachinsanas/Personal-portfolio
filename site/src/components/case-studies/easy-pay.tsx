@@ -947,7 +947,7 @@ export function EasyPayCaseStudy({ next }: { project: Project; next: Project }) 
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/easy-pay/Frame 48100796.png"
+                src="/easy-pay/Frame 48100796.jpg"
                 alt="Easy Pay app — car parking app hero shot with map screen"
                 style={{ width: "100%", display: "block" }}
               />
