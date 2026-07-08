@@ -40,6 +40,25 @@ export function MagneticLink({
     el.style.transition = "transform 0.55s cubic-bezier(0.2,0,0,1)";
   };
 
+  const isExternal = href.startsWith("http://") || href.startsWith("https://");
+
+  if (isExternal) {
+    return (
+      <a
+        ref={ref}
+        href={href}
+        className={className}
+        style={style}
+        target={target ?? "_blank"}
+        rel={rel ?? "noopener noreferrer"}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+      >
+        {children}
+      </a>
+    );
+  }
+
   return (
     <Link
       ref={ref}
