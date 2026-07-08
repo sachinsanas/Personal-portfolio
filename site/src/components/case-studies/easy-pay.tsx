@@ -1177,7 +1177,7 @@ export function EasyPayCaseStudy({ next }: { project: Project; next: Project }) 
                 marginBottom: 10,
               }}
             >
-              View Full Case Study on Behance
+              Explore the Interactive Prototype
             </h3>
             <p
               style={{
@@ -1190,7 +1190,7 @@ export function EasyPayCaseStudy({ next }: { project: Project; next: Project }) 
               Explore the complete design file, prototype, and process documentation on Behance.
             </p>
             <MagneticLink
-              href={BEHANCE_URL}
+              href={PROTOTYPE_URL}
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -1205,7 +1205,7 @@ export function EasyPayCaseStudy({ next }: { project: Project; next: Project }) 
                 borderRadius: 100,
               }}
             >
-              Open on Behance
+              Open Prototype
               <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
                 <path
                   d="M2 6.5H11M7.5 3L11 6.5L7.5 10"
