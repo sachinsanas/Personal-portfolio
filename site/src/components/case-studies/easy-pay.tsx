@@ -72,22 +72,36 @@ const personas = [
   {
     name: "Sarah Parkington",
     age: 32,
-    type: "Urban Driver",
-    quote: "I waste 20 minutes every morning just looking for a spot. I need to know there's a space before I even leave home.",
-    frustrations: ["Takes too long to find parking", "Lack of available slots in busy areas"],
-    goals: ["Quickly find and book nearby parking", "Pay seamlessly with card or UPI"],
+    location: "Urban area",
+    bio: "Sarah is a busy professional working in the city. Her job requires her to commute daily, and she often struggles to find convenient parking spaces near her workplace. She has a moderate level of tech-savviness and relies heavily on her smartphone for various tasks.",
+    frustrations: ["Spend a lot of time searching for parking.", "Lack of parking Slots"],
+    goals: ["Quick solutions for finding parking spaces, saving her time and reducing stress.", "To be able to pay via card or UPI"],
+    personality: [
+      { label: "Mobile Apps", value: 80 },
+      { label: "Softwares", value: 55 },
+      { label: "Social Network", value: 65 },
+      { label: "Internet", value: 80 },
+    ],
     accentColor: ACCENT,
     bgColor: "#EFF7F2",
+    imageAlign: "left" as const,
   },
   {
     name: "Mark Thompson",
     age: 35,
-    type: "Downtown Commuter",
-    quote: "I try three different apps and none of them work properly. Just let me find a spot and pay — that's it.",
-    frustrations: ["Poor UX across existing parking apps", "No cashless payment options available"],
-    goals: ["Hassle-free, end-to-end parking experience", "Fast UPI payment with no queues"],
+    location: "Urban area",
+    bio: "Mark is a busy professional who works in a downtown office. He owns a car and commutes to work every day, facing the challenge of finding convenient and affordable parking spaces near his workplace. Mark values his time and often has tight schedules, requiring him to efficiently locate parking spaces without wasting time searching.",
+    frustrations: ["Available parking apps have poor user experience", "Wants to make payments cashless mostly"],
+    goals: ["To get a hassle free parking experience", "To be able to pay via card or UPI"],
+    personality: [
+      { label: "Mobile Apps", value: 35 },
+      { label: "Softwares", value: 50 },
+      { label: "Social Network", value: 65 },
+      { label: "Internet", value: 55 },
+    ],
     accentColor: "#130F26",
-    bgColor: "#F0EFF5",
+    bgColor: "#EFF7F2",
+    imageAlign: "right" as const,
   },
 ];
 
@@ -605,104 +619,157 @@ export function EasyPayCaseStudy({ next }: { project: Project; next: Project }) 
               />
             </div>
 
-            {/* Persona summary cards */}
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
+            {/* Persona cards */}
+            <div style={{ display: "flex", flexDirection: "column", gap: 32 }}>
               {personas.map((p) => (
                 <div
                   key={p.name}
                   style={{
                     background: p.bgColor,
-                    border: `1px solid ${BORDER}`,
-                    borderRadius: 16,
+                    border: `1px solid rgba(100,185,134,0.25)`,
+                    borderRadius: 20,
                     overflow: "hidden",
+                    display: "grid",
+                    gridTemplateColumns: p.imageAlign === "left" ? "220px 1fr" : "1fr 220px",
                   }}
                 >
-                  <div
-                    style={{
-                      background: p.accentColor,
-                      padding: "20px 24px",
-                      color: "white",
-                    }}
-                  >
-                    <div style={{ fontSize: 10, letterSpacing: "0.12em", opacity: 0.8, marginBottom: 6 }}>
-                      {p.type.toUpperCase()} · AGE {p.age}
-                    </div>
+                  {/* Photo placeholder — shown left for Sarah, right for Mark */}
+                  {p.imageAlign === "left" && (
                     <div
                       style={{
-                        fontFamily: "var(--font-heading)",
-                        fontWeight: 700,
-                        fontSize: 22,
-                        marginBottom: 12,
+                        background: p.accentColor === ACCENT ? "#F2E8E0" : "#D6E8E0",
+                        display: "flex",
+                        alignItems: "flex-end",
+                        justifyContent: "center",
+                        position: "relative",
+                        minHeight: 280,
+                        overflow: "hidden",
                       }}
                     >
-                      {p.name}
-                    </div>
-                    <p style={{ fontSize: 13, opacity: 0.92, fontStyle: "italic", lineHeight: 1.5 }}>
-                      &ldquo;{p.quote}&rdquo;
-                    </p>
-                  </div>
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 0 }}>
-                    <div style={{ padding: "16px 20px", borderRight: `1px solid ${BORDER}` }}>
                       <div
                         style={{
-                          fontSize: 10,
-                          letterSpacing: "0.1em",
-                          textTransform: "uppercase",
-                          color: TEXT_MUTED,
-                          marginBottom: 10,
-                          fontWeight: 700,
+                          position: "absolute",
+                          bottom: 16,
+                          left: 16,
+                          color: "white",
+                          textShadow: "0 1px 4px rgba(0,0,0,0.5)",
                         }}
                       >
-                        Frustrations
-                      </div>
-                      {p.frustrations.map((f) => (
-                        <div
-                          key={f}
-                          style={{
-                            display: "flex",
-                            gap: 8,
-                            fontSize: 13,
-                            color: TEXT_MUTED,
-                            lineHeight: 1.5,
-                            marginBottom: 8,
-                          }}
-                        >
-                          <span style={{ color: "#C0392B", flexShrink: 0 }}>—</span>
-                          {f}
+                        <div style={{ fontFamily: "var(--font-heading)", fontWeight: 700, fontSize: 18, lineHeight: 1.2 }}>
+                          {p.name},
                         </div>
-                      ))}
+                        <div style={{ fontFamily: "var(--font-heading)", fontWeight: 700, fontSize: 18 }}>
+                          {p.age} {p.location}
+                        </div>
+                      </div>
                     </div>
-                    <div style={{ padding: "16px 20px" }}>
-                      <div
-                        style={{
-                          fontSize: 10,
-                          letterSpacing: "0.1em",
-                          textTransform: "uppercase",
-                          color: TEXT_MUTED,
-                          marginBottom: 10,
-                          fontWeight: 700,
-                        }}
-                      >
-                        Goals
+                  )}
+
+                  {/* Content */}
+                  <div style={{ padding: "28px 28px 24px" }}>
+                    {/* Bio */}
+                    <div>
+                      <div style={{ fontFamily: "var(--font-heading)", fontWeight: 700, fontSize: 15, color: TEXT, marginBottom: 8 }}>Bio</div>
+                      <p style={{ fontSize: 13.5, color: TEXT_MUTED, lineHeight: 1.65, marginBottom: 20 }}>{p.bio}</p>
+                    </div>
+
+                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
+                      {/* Frustration */}
+                      <div style={{ background: "white", borderRadius: 12, padding: "16px 18px" }}>
+                        <div style={{ fontFamily: "var(--font-heading)", fontWeight: 700, fontSize: 14, color: TEXT, marginBottom: 10 }}>
+                          Frustration
+                        </div>
+                        {p.frustrations.map((f) => (
+                          <div key={f} style={{ display: "flex", gap: 8, alignItems: "flex-start", fontSize: 13, color: TEXT_MUTED, lineHeight: 1.5, marginBottom: 8 }}>
+                            <span style={{ color: ACCENT, flexShrink: 0, marginTop: 2 }}>●</span>
+                            {f}
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Personality */}
+                      <div style={{ background: "white", borderRadius: 12, padding: "16px 18px" }}>
+                        <div style={{ fontFamily: "var(--font-heading)", fontWeight: 700, fontSize: 14, color: TEXT, marginBottom: 10 }}>
+                          Personality
+                        </div>
+                        {p.personality.map((trait) => (
+                          <div key={trait.label} style={{ marginBottom: 10 }}>
+                            <div style={{ fontSize: 12, color: TEXT_MUTED, marginBottom: 4 }}>{trait.label}</div>
+                            <div style={{ height: 4, background: "rgba(19,15,38,0.08)", borderRadius: 4, position: "relative" }}>
+                              <div
+                                style={{
+                                  position: "absolute",
+                                  left: 0,
+                                  top: 0,
+                                  height: "100%",
+                                  width: `${trait.value}%`,
+                                  background: "rgba(19,15,38,0.35)",
+                                  borderRadius: 4,
+                                }}
+                              />
+                              <div
+                                style={{
+                                  position: "absolute",
+                                  top: "50%",
+                                  left: `${trait.value}%`,
+                                  transform: "translate(-50%, -50%)",
+                                  width: 10,
+                                  height: 10,
+                                  borderRadius: "50%",
+                                  background: "#59556C",
+                                }}
+                              />
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Goal */}
+                    <div style={{ background: "white", borderRadius: 12, padding: "16px 18px", marginTop: 16 }}>
+                      <div style={{ fontFamily: "var(--font-heading)", fontWeight: 700, fontSize: 14, color: TEXT, marginBottom: 10 }}>
+                        Goal
                       </div>
                       {p.goals.map((g) => (
-                        <div
-                          key={g}
-                          style={{
-                            display: "flex",
-                            gap: 8,
-                            fontSize: 13,
-                            color: TEXT_MUTED,
-                            lineHeight: 1.5,
-                            marginBottom: 8,
-                          }}
-                        >
-                          <span style={{ color: ACCENT, flexShrink: 0 }}>→</span>
+                        <div key={g} style={{ display: "flex", gap: 8, alignItems: "flex-start", fontSize: 13, color: TEXT_MUTED, lineHeight: 1.5, marginBottom: 8 }}>
+                          <span style={{ color: ACCENT, flexShrink: 0, marginTop: 2 }}>●</span>
                           {g}
                         </div>
                       ))}
                     </div>
                   </div>
+
+                  {/* Photo placeholder right side for Mark */}
+                  {p.imageAlign === "right" && (
+                    <div
+                      style={{
+                        background: "#C8D8C8",
+                        display: "flex",
+                        alignItems: "flex-end",
+                        justifyContent: "center",
+                        position: "relative",
+                        minHeight: 280,
+                        overflow: "hidden",
+                      }}
+                    >
+                      <div
+                        style={{
+                          position: "absolute",
+                          bottom: 16,
+                          left: 16,
+                          color: "white",
+                          textShadow: "0 1px 4px rgba(0,0,0,0.5)",
+                        }}
+                      >
+                        <div style={{ fontFamily: "var(--font-heading)", fontWeight: 700, fontSize: 18, lineHeight: 1.2 }}>
+                          {p.name},
+                        </div>
+                        <div style={{ fontFamily: "var(--font-heading)", fontWeight: 700, fontSize: 18 }}>
+                          {p.age} {p.location}
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

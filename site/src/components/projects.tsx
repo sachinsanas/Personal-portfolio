@@ -127,7 +127,8 @@ export function Projects() {
                 {project.description}
               </p>
               <MagneticLink
-                href={`/work/${project.slug}`}
+                href={project.caseStudyUrl ?? `/work/${project.slug}`}
+                {...(project.caseStudyUrl ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 className="case-study-link"
                 style={{
                   display: "inline-flex",
