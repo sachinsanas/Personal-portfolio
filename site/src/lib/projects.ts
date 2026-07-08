@@ -43,7 +43,6 @@ export const projects: Project[] = [
       screenTint: "#D4EDDF",
       screens: ["list", "form", "chart"],
     },
-    caseStudyUrl: "https://claude.ai/code/artifact/c022a542-28f3-45bc-b6c6-6e13dbf260ed",
   },
   {
     slug: "banking-analytics-dashboard",
