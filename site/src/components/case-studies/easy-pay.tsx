@@ -3,7 +3,7 @@ import { MagneticLink } from "../magnetic-link";
 import { NextProjectTeaser } from "./shared";
 import type { Project } from "@/lib/projects";
 
-const BEHANCE_URL = "https://www.behance.net/gallery/193217593/Easy-Pay-App";
+const PROTOTYPE_URL = "https://www.figma.com/proto/C5PplsQdb6PkGxjLs0GHC6/EasyP-App?node-id=759-1181&viewport=461%2C-478%2C0.38&t=AW7SDLsOGFltKSUf-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=759%3A1181&page-id=643%3A955";
 
 const ACCENT = "#64B986";
 const BG = "#F8F5EF";
