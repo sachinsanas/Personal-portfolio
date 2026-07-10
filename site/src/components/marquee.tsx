@@ -33,8 +33,7 @@ color: "rgba(26,22,20,0.45)",      }}
           <span style={{ padding: "0 28px", color: item.color }}>
             {item.text}
           </span>
-<span style={{ color: "rgba(26,22,20,0.18)" }}}>·</span>span>        </span>
-      ))}
+<span style={{ color: "rgba(26,22,20,0.18)" }}}>·</span>span>      ))}
     </span>
   );
 }
@@ -43,8 +42,7 @@ export function Marquee() {
   return (
     <div
       style={{
-        background: "##EDE8E0",
-        padding: "16px 0",
+background: "#EDE8E0",        padding: "16px 0",
         overflow: "hidden",
 borderTop: "1px solid rgba(26,22,20,0.08)",      }}
     >
