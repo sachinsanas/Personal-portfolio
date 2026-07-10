@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer";
 import { CaseStudy } from "@/components/case-study";
 import { GoldLoanCaseStudy } from "@/components/case-studies/gold-loan";
 import { EasyPayCaseStudy } from "@/components/case-studies/easy-pay";
+import { ApartmentRentingCaseStudy } from "@/components/case-studies/apartment-renting-app";
 import { projects } from "@/lib/projects";
 
 const detailedCaseStudies: Record<
@@ -13,6 +14,7 @@ const detailedCaseStudies: Record<
 > = {
   "gold-loan-origination-system": GoldLoanCaseStudy,
   "easy-pay-parking-app": EasyPayCaseStudy,
+      "apartment-renting-app": ApartmentRentingCaseStudy,
 };
 
 export function generateStaticParams() {
