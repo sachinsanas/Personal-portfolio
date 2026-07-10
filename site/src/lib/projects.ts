@@ -45,20 +45,19 @@ export const projects: Project[] = [
     },
   },
   {
-    slug: "banking-analytics-dashboard",
-    category: "Data Visualization · Analytics",
-    title: "Banking Analytics Dashboard",
-    description:
-      "A real-time analytics platform for banking executives covering portfolio health, NPA monitoring, regional performance, and predictive risk scoring. First AI-augmented dashboard in the product suite.",
-    imageSide: "left",
-    accent: "#1A75B7",
-    visual: {
-      panelTint: "#E9E7E3",
-      accent: "#3E9BE0",
-      screenTint: "rgba(255,255,255,0.08)",
-      screens: ["chart", "chart", "chart"],
-      darkScreen: true,
-    },
+        slug: "apartment-renting-app",
+        category: "Mobile Application · Marketplace",
+        title: "Apartment Renting App",
+        description:
+                "Built an end-to-end apartment rental marketplace mobile app connecting renters and landlords. Features include advanced filtering, virtual tours, secure payments, and rental agreement management.",
+        imageSide: "right",
+        accent: "#3D72B4",
+        visual: {
+                panelTint: "#EDF2FA",
+                accent: "#3D72B4",
+                screenTint: "#E8EFFA",
+                screens: ["list", "detail", "booking"],
+        },
   },
   {
     slug: "mobile-banking-app",
