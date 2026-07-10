@@ -14,6 +14,20 @@ export function Hero() {
         padding: "140px 72px 100px",
       }}
     >
+      {/* Texture overlay */}
+              <div
+                          style={{
+                                        position: "absolute",
+                                        top: 0,
+                                        left: 0,
+                                        right: 0,
+                                        bottom: 0,
+                                        backgroundImage: "repeating-linear-gradient(45deg, #1A1614 0px, #1A1614 2px, transparent 2px, transparent 4px)",
+                                        opacity: 0.012,
+                                        pointerEvents: "none",
+                                        zIndex: 1,
+                          }}
+                        />
       {/* Blobs */}
       <div
         style={{
