@@ -26,16 +26,14 @@ function MarqueeGroup({ ariaHidden }: { ariaHidden?: boolean }) {
         fontFamily: "var(--font-body)",
         letterSpacing: "0.09em",
         textTransform: "uppercase",
-        color: "rgba(255,255,255,0.55)",
-      }}
+color: "rgba(26,22,20,0.45)",      }}
     >
       {items.map((item, i) => (
         <span key={i} style={{ display: "contents" }}>
           <span style={{ padding: "0 28px", color: item.color }}>
             {item.text}
           </span>
-          <span style={{ color: "rgba(255,255,255,0.2)" }}>·</span>
-        </span>
+<span style={{ color: "rgba(26,22,20,0.18)" }}}>·</span>span>        </span>
       ))}
     </span>
   );
@@ -45,11 +43,10 @@ export function Marquee() {
   return (
     <div
       style={{
-        background: "#1A1614",
+        background: "##EDE8E0",
         padding: "16px 0",
         overflow: "hidden",
-        borderTop: "1px solid rgba(255,255,255,0.06)",
-      }}
+borderTop: "1px solid rgba(26,22,20,0.08)",      }}
     >
       <div
         style={{
