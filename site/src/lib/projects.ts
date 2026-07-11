@@ -56,7 +56,7 @@ export const projects: Project[] = [
                 panelTint: "#EDF2FA",
                 accent: "#3D72B4",
                 screenTint: "#E8EFFA",
-                screens: ["list", "detail", "booking"],
+                screens: ["list", "form", "chart"],
         },
   },
   {
