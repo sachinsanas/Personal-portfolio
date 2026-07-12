@@ -113,7 +113,7 @@ const outcomes = [
 function SectionEyebrow({ number, label }: { number: string; label: string }) {
     return (
           <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 20 }}>
-                  <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: ACCENT }}>{number}</span>span>
+<span style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: ACCENT }}>{number}</spa
                   <span style={{ fontSize: 11, letterSpacing: "0.14em", textTransform: "uppercase", color: TEXT_MUTED }}>
                     {label}
                   </span>span>
