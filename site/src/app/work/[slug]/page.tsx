@@ -28,6 +28,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const project = projects.find((p) => p.slug === slug);
+  // Apartment Renting App case study route trigger
   if (!project) return {};
   return {
     title: `${project.title} — Sachin Sanas`,
