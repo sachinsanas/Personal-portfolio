@@ -113,10 +113,10 @@ const outcomes = [
 function SectionEyebrow({ number, label }: { number: string; label: string }) {
     return (
           <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 20 }}>
-<span style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: ACCENT }}>{number}</spa
+<span style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: ACCENT }}>{number}</span>
                   <span style={{ fontSize: 11, letterSpacing: "0.14em", textTransform: "uppercase", color: TEXT_MUTED }}>
                     {label}
-                  </span>span>
+                  </span>
                   <div style={{ flex: 1, height: 1, background: BORDER }} />
           </div>div>
         );
@@ -193,7 +193,7 @@ export function ApartmentRentingCaseStudy({ next }: { project: Project; next: Pr
                           {toc.map((item) => (
                         <span key={item} style={{ fontSize: 12.5, padding: "7px 14px", borderRadius: 100, border: "1px solid rgba(26,22,20,0.15)", color: TEXT_MUTED, background: CARD }}>
                           {item}
-                        </span>span>
+                        </span>n>span>
                       ))}
                         </div>div>
                 </section>section>
@@ -386,8 +386,8 @@ export function ApartmentRentingCaseStudy({ next }: { project: Project; next: Pr
                               ].map((t) => (
                                                     <div key={t.name} style={{ background: CARD, border: `1px solid ${BORDER}`, borderRadius: 12, padding: "16px 20px" }}>
                                                                           <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6 }}>
-                                                                                                  <span style={{ fontSize: 11, color: TEXT_MUTED, letterSpacing: "0.1em", textTransform: "uppercase" }}>{t.name}</span>span>
-                                                                                                  <span style={{ fontSize: 11, color: TEXT_MUTED, fontFamily: "var(--font-mono)" }}>{t.size} / {t.weight}</span>span>
+                                                                                                  <span style={{ fontSize: 11, color: TEXT_MUTED, letterSpacing: "0.1em", textTransform: "uppercase" }}>{t.name}</span>n>span>
+                                                                                                  <span style={{ fontSize: 11, color: TEXT_MUTED, fontFamily: "var(--font-mono)" }}>{t.size} / {t.weight}</span>n>span>
                                                                           </div>div>
                                                                           <div style={{
                                                                               fontFamily: "var(--font-heading)",
