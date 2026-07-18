@@ -168,45 +168,6 @@ export function Hero() {
           </MagneticLink>
         </Reveal>
       </div>
-
-      {/* Scroll indicator */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: 44,
-          left: 72,
-          display: "flex",
-          alignItems: "center",
-          gap: 11,
-          zIndex: 2,
-        }}
-      >
-        <div style={{ animation: "scrollDot 2.4s ease-in-out infinite" }}>
-          <svg width="18" height="28" viewBox="0 0 18 28" fill="none">
-            <rect
-              x="1"
-              y="1"
-              width="16"
-              height="26"
-              rx="8"
-              stroke="#B8B1B2"
-              strokeWidth="1.4"
-            />
-            <rect x="7.5" y="5" width="3" height="6" rx="1.5" fill="#B8B1B2" />
-          </svg>
-        </div>
-        <span
-          style={{
-            fontSize: 10.5,
-            letterSpacing: "0.12em",
-            textTransform: "uppercase",
-            color: "#A49D9E",
-            fontFamily: "var(--font-body)",
-          }}
-        >
-          Scroll
-        </span>
-      </div>
     </section>
   );
 }
